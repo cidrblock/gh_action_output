@@ -16,7 +16,7 @@ class Gh_Action_Output():
             asterisk = ""
         
         decor = ""
-        if decorate = "check":
+        if decorate == "check":
             decor = "\u2705"
         elif decorate == "cross":
             decor = "u274c"
