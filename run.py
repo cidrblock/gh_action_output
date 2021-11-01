@@ -10,15 +10,14 @@ def main():
         
     gh = Gh_Action_Output(serialization="json")
 
-    gh.group("TASK [Gathering Facts:localhost_1]", gather)
-    gh.group("TASK [Gathering Facts:localhost_2]", gather)
-    gh.group("TASK [Gathering Facts:localhost_3]", gather)
-    gh.group("TASK [Gathering Facts:localhost_4]", gather)
-    gh.group("TASK [Do this:localhost_1]", fact)
-    gh.group("TASK [Do this:localhost_2]", fact)
-    gh.group("TASK [Do this:localhost_3]", fact)
-    gh.group("TASK [Do this:localhost_4]", fact)
-    gh.error("TASK [Do this:localhost_4]")
+    gh.group("TASK [Gathering Facts:localhost_1]", content=gather, decorate="check")
+    gh.group("TASK [Gathering Facts:localhost_2]", content=gather, decorate="check")
+    gh.group("TASK [Gathering Facts:localhost_3]", content=gather, decorate="check")
+    gh.group("TASK [Gathering Facts:localhost_4]", content=gather, decorate="check")
+    gh.group("TASK [Do this:localhost_1]", content=fact, decorate="check")
+    gh.group("TASK [Do this:localhost_2]", content=fact, decorate="check")
+    gh.group("TASK [Do this:localhost_3]", content=fact, decorate="check")
+    gh.group("TASK [Do this:localhost_4]", content=fact, decorate="cross")
 
     play = """
     localhost_1                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

@@ -9,13 +9,24 @@ class Gh_Action_Output():
     def error(self, message):
             print(f"::error::{message}")
 
-    def group(self, title:str, content:str = "", asterisk: bool=True):
+    def group(self, title:str, content:str = "", decorate: str = "", asterisk: bool=True, ):
         if asterisk:
             asterisk = " " + ("*" * (66- len(title)))
         else:
             asterisk = ""
+        
+        decor = ""
+        if decorate = "check":
+            decor = "\u2705"
+        elif decorate == "cross":
+            decor = "u274c"
+        else:
+            raise ValueError(f"decoration '{decorate}' %s not supported")
+        
+        if decor:
+            decor += " "
 
-        print(f"::group::\u2705 \u274c {title}{asterisk}")
+        print(f"::group::{decor}{title}{asterisk}")
         for line in self._serialize(content).splitlines():
             print(f"{line}")
         print("::endgroup::")
