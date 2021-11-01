@@ -16,6 +16,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       
-      - name: Install test requirements
+      - name: Install requirements
+        run: pip install ansible-navigator
+      
+      - name: Run script
         run: python run.py
    
