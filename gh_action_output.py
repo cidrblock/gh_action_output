@@ -7,7 +7,7 @@ class Gh_Action_Output():
         self._serialization = serialization
 
     def error(self, message):
-            print(f"::error::{message}")
+            print(f"::error::\u001B[31m{message}\u001B[0m")
 
     def group(self, title:str , content:str = ""):
         print(f"::group::{title}")
