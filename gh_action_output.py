@@ -12,7 +12,7 @@ class Gh_Action_Output():
 
     def group(self, title:str, content:str = "", decorate: str = "", asterisk: bool=True, ):
         
-        decor = "\u200"
+        decor = "\u2000"
         if decorate == "check":
             decor = "\u2705"
         elif decorate == "cross":
