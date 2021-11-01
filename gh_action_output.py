@@ -43,7 +43,7 @@ class Gh_Action_Output():
     
     def print_indented(self, message, asterisk=False):
         if asterisk:
-            asterisk = " " + ("*" * (66- len(message)))
+            asterisk = " " + ("*" * (60 - len(message)))
         else:
             asterisk = ""
         print(f"***** {message}{asterisk}")
