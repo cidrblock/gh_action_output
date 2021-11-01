@@ -4,6 +4,7 @@ from ansible_navigator._yaml import human_dump
 class Gh_Action_Output():
 
     def __init__(self, serialization="yaml"):
+        self._indent = " " * 6
         self._serialization = serialization
 
     def error(self, message):
@@ -42,7 +43,7 @@ class Gh_Action_Output():
             asterisk = " " + ("*" * (66- len(message)))
         else:
             asterisk = ""
-        print(f"   {message}{asterisk}")
+        print(f"{self._indent}{message}{asterisk}")
 
     def warning(self, message):
         print(f"::warning::{message}")

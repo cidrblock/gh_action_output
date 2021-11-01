@@ -10,6 +10,7 @@ def main():
         
     gh = Gh_Action_Output(serialization="json")
 
+    gh.print_indented("")
     gh.print_indented("PLAY [test run]", asterisk=True)
     gh.print_indented("")
     gh.group("TASK [Gathering Facts:localhost_1]", content=gather, decorate="check")
