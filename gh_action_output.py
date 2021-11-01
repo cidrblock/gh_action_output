@@ -15,7 +15,7 @@ class Gh_Action_Output():
         else:
             asterisk = ""
 
-        print(f"::group::\u2705 \u274c{title}{asterisk}")
+        print(f"::group::\u2714 \u274c{title}{asterisk}")
         for line in self._serialize(content).splitlines():
             print(f"{line}")
         print("::endgroup::")
