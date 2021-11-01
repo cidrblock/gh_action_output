@@ -4,7 +4,6 @@ from gh_action_output import Gh_Action_Output
 def main():
     with open ("task_output.yaml", "r") as fhand:
         data=fhand.read()
-    print(data)
         
     gh = Gh_Action_Output(serialization="json")
 

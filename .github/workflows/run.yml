@@ -1,4 +1,4 @@
-name: Collection lint tests
+name: Sample workflow
 on: [push, pull_request]
 jobs:
   deps:
@@ -19,6 +19,6 @@ jobs:
       - name: Install requirements
         run: pip install ansible-navigator
       
-      - name: Run script
+      - name: Run playbook with ansible-navigator --mode gh_action
         run: python run.py
    
