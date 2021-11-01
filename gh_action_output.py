@@ -10,7 +10,7 @@ class Gh_Action_Output():
             print(f"::error::{message}")
 
     def group(self, title:str , content:str = ""):
-        print(f"::group::{title}")
+        print(f"::group::\033[31;1;4m{title}\033[0m")
         print(self._serialize(content))
         print("::endgroup::")
     
