@@ -1,0 +1,40 @@
+{
+    "version": "1.0.0",
+    "plays": [
+        {
+            "playbook": "/home/bthornto/github/gh_action_cls/site.yaml",
+            "playbook_uuid": "7aad5b77-f90e-4258-aa7a-5c3104469ec2",
+            "play": "test run",
+            "play_uuid": "b63da52e-37ea-32ea-8ae0-000000000005",
+            "play_pattern": "locals",
+            "name": "test run",
+            "pattern": "locals",
+            "uuid": "b63da52e-37ea-32ea-8ae0-000000000005",
+            "__play_name": "test run",
+            "tasks": [],
+            "__ok": 0,
+            "__skipped": 0,
+            "__failed": 0,
+            "__unreachable": 0,
+            "__ignored": 0,
+            "__in_progress": 0,
+            "__changed": 0,
+            "__task_count": 0,
+            "__progress": "        ",
+            "___progress": "0%"
+        }
+    ],
+    "stdout": [
+        "\u001b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\u001b[0m",
+        "\u001b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\u001b[0m",
+        "\u001b[1;35mthe implicit localhost does not match 'all'\u001b[0m",
+        "\u001b[1;35m[WARNING]: Could not match supplied host pattern, ignoring: locals\u001b[0m",
+        "",
+        "PLAY [test run] ****************************************************************",
+        "\u001b[0;36mskipping: no hosts matched\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************"
+    ],
+    "status": "successful",
+    "status_color": 13
+}

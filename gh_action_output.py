@@ -9,8 +9,13 @@ class Gh_Action_Output():
     def error(self, message):
             print(f"::error::{message}")
 
-    def group(self, title:str , content:str = ""):
-        print(f"::group::{title}")
+    def group(self, title:str, content:str = "", asterisk: bool=True):
+        if asterisk:
+            asterisk = " " + ("*" * (66- len(title)))
+        else:
+            asterisk = ""
+
+        print(f"::group::{title}{asterisk}")
         for line in self._serialize(content).splitlines():
             print(f"{line}")
         print("::endgroup::")
