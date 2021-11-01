@@ -37,12 +37,12 @@ class Gh_Action_Output():
     def notice(self, message):
         print(f"::notice::{message}")
     
-    def print(self, message, asterisk=False):
+    def print_indented(self, message, asterisk=False):
         if asterisk:
             asterisk = " " + ("*" * (66- len(message)))
         else:
             asterisk = ""
-        print(f"::group::{message}{asterisk}")
+        print(f"   {message}{asterisk}")
 
     def warning(self, message):
         print(f"::warning::{message}")
