@@ -12,12 +12,12 @@ class Gh_Action_Output():
 
     def group(self, title:str, content:str = "", decorate: str = "", asterisk: bool=True, ):
         
-        decor = ""
+        decor = "\u200"
         if decorate == "check":
             decor = "\u2705"
         elif decorate == "cross":
             decor = "\u274c"
-        elif decorate == "":
+        elif decorate == "\u200":
             pass
         else:
             raise ValueError(f"decoration '{decorate}' %s not supported")
