@@ -46,7 +46,7 @@ class Gh_Action_Output():
             asterisk = " " + ("*" * (60 - len(message)))
         else:
             asterisk = ""
-        print(f"***** {message}{asterisk}")
+        print(f"**** {message}{asterisk}")
 
     def warning(self, message):
         print(f"::warning::{message}")
