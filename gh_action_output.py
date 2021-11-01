@@ -10,15 +10,14 @@ class Gh_Action_Output():
     def error(self, message):
             print(f"::error::{message}")
 
-    def group(self, title:str, content:str = "", decorate: str = "", asterisk: bool=True, ):
+    def group(self, title:str, content:str = "", decorate: str = "\u2000", asterisk: bool=True, ):
         
-        decor = "\u2000"
         if decorate == "check":
             decor = "\u2705"
         elif decorate == "cross":
             decor = "\u274c"
         elif decorate == "\u2000":
-            pass
+            decor = decorate
         else:
             raise ValueError(f"decoration '{decorate}' %s not supported")
         
