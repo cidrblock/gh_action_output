@@ -28,8 +28,8 @@ def main():
     localhost_3                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
     localhost_4                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
     """
-
-    gh.group("PLAY RECAP", play)
+    gh.print_blank()
+    gh.group("PLAY RECAP", play, decorate="cross")
 
     # gh.notice("notice message")
 
