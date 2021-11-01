@@ -19,7 +19,7 @@ class Gh_Action_Output():
         if decorate == "check":
             decor = "\u2705"
         elif decorate == "cross":
-            decor = "u274c"
+            decor = "\u274c"
         else:
             raise ValueError(f"decoration '{decorate}' %s not supported")
         
