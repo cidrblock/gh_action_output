@@ -5,15 +5,30 @@ def main():
         
     gh = Gh_Action_Output(serialization="json")
 
-    gh.group("group 1", {1:2})
+    gh.group("TASK [Gathering Facts:localhost_1] *****************************************************************", {1:2})
+    gh.group("TASK [Gathering Facts:localhost_2] *****************************************************************", {1:2})
+    gh.group("TASK [Gathering Facts:localhost_3] *****************************************************************", {1:2})
+    gh.group("TASK [Gathering Facts:localhost_4] *****************************************************************", {1:2})
+    gh.group("TASK [Do this:localhost_1] *****************************************************************", {1:2})
+    gh.group("TASK [Do this:localhost_2] *****************************************************************", {1:2})
+    gh.group("TASK [Do this:localhost_3] *****************************************************************", {1:2})
+    gh.group("TASK [Do this:localhost_4] *****************************************************************", {1:2})
+    gh.error("TASK [Do this:localhost_4] *****************************************************************")
 
-    gh.error("error message")
+    play = """
+    localhost_1                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    localhost_2                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    localhost_3                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    localhost_4                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
+    """
 
-    gh.notice("notice message")
+    gh.group("PLAY RECAP *********************************************************************", play)
 
-    gh.warning("warning message")
+    # gh.notice("notice message")
 
-    gh.group("group 2", {1:2})
+    # gh.warning("warning message")
+
+    # gh.group("group 2", {1:2})
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,7 @@
+- name: test run
+  hosts: locals
+  gather_facts: true
+  tasks:
+  - name: Do this
+    debug:
+      msg: foo

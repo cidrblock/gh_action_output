@@ -12,7 +12,7 @@ class Gh_Action_Output():
     def group(self, title:str , content:str = ""):
         print(f"::group::{title}")
         for line in self._serialize(content).splitlines():
-            print(f"\u001B[31m{line}\u001B[0m")
+            print(f"{line}")
         print("::endgroup::")
     
     def notice(self, message):

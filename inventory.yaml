@@ -1,0 +1,23 @@
+all:
+  vars:
+    ansible_python_interpreter: python
+
+  children:
+    locals:
+      hosts:
+        localhost_1:
+        localhost_2:
+        localhost_3:
+        localhost_4:
+      vars:
+        ansible_host: localhost
+        ansible_connection: local
+    nxos:
+      hosts:
+        nxos101:
+        nxos102:
+        nxos103:
+        nxos104:
+      vars:
+        ansible_network_os: cisco.nxos.nxos
+ 
