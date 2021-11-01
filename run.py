@@ -10,9 +10,9 @@ def main():
         
     gh = Gh_Action_Output(serialization="json")
 
-    gh.print_indented("")
+    gh.print_blank()
     gh.print_indented("PLAY [test run]", asterisk=True)
-    gh.print_indented("")
+    gh.print_blank()
     gh.group("TASK [Gathering Facts:localhost_1]", content=gather, decorate="check")
     gh.group("TASK [Gathering Facts:localhost_2]", content=gather, decorate="check")
     gh.group("TASK [Gathering Facts:localhost_3]", content=gather, decorate="check")

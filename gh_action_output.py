@@ -32,18 +32,21 @@ class Gh_Action_Output():
 
         print(f"::group::{decor}{title}{asterisk}")
         for line in self._serialize(content).splitlines():
-            print(f"{line}")
+            print(f"{' ' * self._}{line}")
         print("::endgroup::")
     
     def notice(self, message):
         print(f"::notice::{message}")
+    
+    def print_blank(self):
+        print("")
     
     def print_indented(self, message, asterisk=False):
         if asterisk:
             asterisk = " " + ("*" * (66- len(message)))
         else:
             asterisk = ""
-        print(f"{'*' * self._indent}{message}{asterisk}")
+        print(f"***** {message}{asterisk}")
 
     def warning(self, message):
         print(f"::warning::{message}")
