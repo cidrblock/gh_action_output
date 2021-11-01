@@ -17,3 +17,20 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("::group::Wrapper")
+
+    print("Wrapper begin")
+
+    print("::group::Foo")
+    print("Foo")
+    print("::endgroup")
+
+    print("Something")
+
+    print("::group::Bar")
+    print("Bar")
+    print("::endgroup")
+
+    print("Wrapper end")
+
+    print("::endgroup::")
