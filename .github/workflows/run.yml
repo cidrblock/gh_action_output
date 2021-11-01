@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.8]
-    name: "Lint: python ${{ matrix.python-version }}"
+    name: "Sample workflow"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
