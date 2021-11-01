@@ -23,10 +23,10 @@ def main():
     gh.group("TASK [Do this:localhost_4]", content=fact, decorate="cross")
 
     play = """
-    localhost_1                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-    localhost_2                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-    localhost_3                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-    localhost_4                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
+localhost_1                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+localhost_2                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+localhost_3                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+localhost_4                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
     """
     gh.print_blank()
     gh.group("PLAY RECAP", play, decorate="cross")
