@@ -31,7 +31,7 @@ class Gh_Action_Output():
 
         print(f"::group::{decor}{title}{asterisk}")
         for line in self._serialize(content).splitlines():
-            print(f"     {line}")
+            print(f"   {line}")
         print("::endgroup::")
     
     def notice(self, message):
