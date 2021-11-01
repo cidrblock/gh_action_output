@@ -2,19 +2,22 @@
 from gh_action_output import Gh_Action_Output
 
 def main():
-    with open ("task_output.yaml", "r") as fhand:
-        data=fhand.read()
+    with open ("gather_output.yaml", "r") as fhand:
+        gather=fhand.read()
+    
+    with open ("set_fact_output.yaml", "r") as fhand:
+        fact=fhand.read()
         
     gh = Gh_Action_Output(serialization="json")
 
-    gh.group("TASK [Gathering Facts:localhost_1]", data)
-    gh.group("TASK [Gathering Facts:localhost_2]", data)
-    gh.group("TASK [Gathering Facts:localhost_3]", data)
-    gh.group("TASK [Gathering Facts:localhost_4]", data)
-    gh.group("TASK [Do this:localhost_1]", data)
-    gh.group("TASK [Do this:localhost_2]", data)
-    gh.group("TASK [Do this:localhost_3]", data)
-    gh.group("TASK [Do this:localhost_4]", data)
+    gh.group("TASK [Gathering Facts:localhost_1]", gather)
+    gh.group("TASK [Gathering Facts:localhost_2]", gather)
+    gh.group("TASK [Gathering Facts:localhost_3]", gather)
+    gh.group("TASK [Gathering Facts:localhost_4]", gather)
+    gh.group("TASK [Do this:localhost_1]", fact)
+    gh.group("TASK [Do this:localhost_2]", fact)
+    gh.group("TASK [Do this:localhost_3]", fact)
+    gh.group("TASK [Do this:localhost_4]", fact)
     gh.error("TASK [Do this:localhost_4]")
 
     play = """

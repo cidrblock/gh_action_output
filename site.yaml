@@ -2,6 +2,6 @@
   hosts: locals
   gather_facts: true
   tasks:
-  - name: Do this
-    debug:
-      msg: foo
+  - name: Set a fact
+    ansible.builtin.set_fact:
+      foo: bar

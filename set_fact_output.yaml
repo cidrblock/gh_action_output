@@ -1,0 +1,19 @@
+---
+duration: 0.01445
+end: '2021-11-01T18:06:42.710404'
+event_loop: null
+host: localhost_1
+play: test run
+play_pattern: locals
+playbook: /home/bthornto/github/gh_action_cls/site.yaml
+remote_addr: localhost_1
+res:
+  _ansible_no_log: false
+  ansible_facts:
+    foo: bar
+  changed: false
+start: '2021-11-01T18:06:42.695954'
+task: Set a fact
+task_action: ansible.builtin.set_fact
+task_args: ''
+task_path: /home/bthornto/github/gh_action_cls/site.yaml:5
